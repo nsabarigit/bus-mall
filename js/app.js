@@ -1,6 +1,6 @@
 'use strict';
 
-// array to hold all of our Goats to track
+// array to hold all of our Bus Mall Item to track
 BusMallItem.allBusMallItems = [];
 
 // create objects for our Goats
@@ -17,14 +17,14 @@ new BusMallItem('Boots', 'img/boots.jpg');
 new BusMallItem('Bathroom', 'img/bathroom.jpg');
 new BusMallItem('Breakfast', 'img/breakfast.jpg');
 
-// need event listenter to track clicks of Goat images
+// need event listenter to track clicks of Bus Mall Item images
 var imgContainer = document.getElementById('busmall-item-pic');
-imgContainer.addEventListener('click', randomGoat);
+imgContainer.addEventListener('click', randomBusMallImage);
 
 // display random goat images
-function randomGoat() {
+function randomBusMallImage() {
   var randomIdx = Math.floor(Math.random() * BusMallItem.allBusMallItems.length);
   imgContainer.src = BusMallItem.allBusMallItems[randomIdx].filepath;
 }
 
-randomGoat();
+randomBusMallImage();
