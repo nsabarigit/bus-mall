@@ -1,30 +1,30 @@
 'use strict';
 
 // array to hold all of our Goats to track
-Goat.allGoats = [];
+BusMallItem.allBusMallItems = [];
 
 // create objects for our Goats
-function Goat(name, filepath) {
+function BusMallItem(name, filepath) {
   this.name = name;
   this.filepath = filepath;
-  Goat.allGoats.push(this);
+
+  BusMallItem.allBusMallItems.push(this);
 }
 
-new Goat('Cruiser', 'img/cruisin-goat.jpg');
-new Goat('Kissing', 'img/kissing-goat.jpg');
-new Goat('Sassy', 'img/sassy-goat.jpg');
-new Goat('Smiling', 'img/smiling-goat.jpg');
-new Goat('Sweater', 'img/sweater-goat.jpg');
+new BusMallItem('Bag', 'img/bag.jpg');
+new BusMallItem('Banana', 'img/banana.jpg');
+new BusMallItem('Boots', 'img/boots.jpg');
+new BusMallItem('Bathroom', 'img/bathroom.jpg');
+new BusMallItem('Breakfast', 'img/breakfast.jpg');
 
 // need event listenter to track clicks of Goat images
-var imgContainer = document.getElementById('goat-pic');
+var imgContainer = document.getElementById('busmall-item-pic');
 imgContainer.addEventListener('click', randomGoat);
 
 // display random goat images
-function randomGoat() {  
-  var randomIdx = Math.floor(Math.random() * Goat.allGoats.length);
-
-  imgContainer.src = Goat.allGoats[randomIdx].filepath;
+function randomGoat() {
+  var randomIdx = Math.floor(Math.random() * BusMallItem.allBusMallItems.length);
+  imgContainer.src = BusMallItem.allBusMallItems[randomIdx].filepath;
 }
 
 randomGoat();
